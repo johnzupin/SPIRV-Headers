@@ -1,0 +1,5 @@
+spirv-headers (1.5.3+2-1) bionic; urgency=medium
+
+  * Initial release
+
+ -- John Zupin <john@unknown>  Tue, 23 Jun 2020 11:08:04 -0600
