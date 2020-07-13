@@ -10,7 +10,7 @@ Vcs-Git: https://github.com/KhronosGroup/SPIRV-Headers
 Vcs-Browser: https://github.com/KhronosGroup/SPIRV-Headers
 
 Package: spirv-headers
-Architecture: any
+Architecture: all
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: This package contains machine-readable files
  for the SPIR-V Registry
