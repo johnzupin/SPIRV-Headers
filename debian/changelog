@@ -1,3 +1,42 @@
+spirv-headers (1.5.3+18-1lunarg18.04-1) bionic; urgency=medium
+
+  [ Dmitry Sidorov ]
+  * Add SPV_INTEL_function_pointers preview extension
+
+  [ Michael Kinsner ]
+  * Propose bit allocation mechanism for the FP Fast Math Mode bitfield, following from the mechanism previously added for the loop control bitfield.
+
+  [ John Kessenich ]
+  * Header build from previous grammar update.
+
+  [ Dmitry Sidorov ]
+  * Add Intel specific definitions from KhronosGroup/SPIRV-LLVM-Translator
+  * Apply suggestions
+
+  [ John Kessenich ]
+  * Rebuild headers against the previous grammar commit.
+
+  [ David Neto ]
+  * spir-v.xml: Use plain ASCII quotes in comment
+
+  [ dan sinclair ]
+  * Register the Tint compiler
+
+  [ John Zupin ]
+  * control: update arch to all
+
+  [ Vikram Kushwaha ]
+  * Add changes for SPV_EXT_shader_atomic_float
+
+  [ alan-baker ]
+  * Support SPV_KHR_terminate_invocation (#163)
+
+  [ John Zupin ]
+  * copyright: update for release
+  * copyright: updated to reflect LunarG as debian/ creators
+
+ -- John Zupin <john@odin>  Mon, 27 Jul 2020 14:14:34 -0600
+
 spirv-headers (1.5.3+2-1) bionic; urgency=medium
 
   * Initial release
