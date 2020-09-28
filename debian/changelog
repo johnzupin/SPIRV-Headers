@@ -1,3 +1,29 @@
+spirv-headers (1.5.3+24-1lunarg20.04-1) focal; urgency=medium
+
+  [ John Kessenich ]
+  * Update the registry in spir-v.xml to modernize and split out opcodes. (#156)
+
+  [ alan-baker ]
+  * Publish the headers for the clspv embedded reflection non-semantic extended instruction set (#164)
+  * Update BUILD.bazel and BUILD.gn (#166)
+
+  [ John Zupin ]
+  * debian: remove README.Debian
+
+  [ Mariusz Merecki ]
+  * Reserve SPIR-V token range for upcoming Intel extensions. (#165)
+
+  [ John Kessenich ]
+  * Rebuild of latest headers, which slightly moves OpTerminateInvocation
+
+  [ Shahbaz Youssefi ]
+  * Register the ANGLE compiler (#168)
+
+  [ Yuwen Wu ]
+  * Register the Messiah SPIR-V CodeGen (#169)
+
+ -- John Zupin <john@odin>  Mon, 28 Sep 2020 16:45:34 -0600
+
 spirv-headers (1.5.3+18-1lunarg20.04-1) focal; urgency=medium
 
   [ Dmitry Sidorov ]
