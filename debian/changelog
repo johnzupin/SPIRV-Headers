@@ -1,3 +1,39 @@
+spirv-headers (1.5.4+10-1lunarg20.04-1) focal; urgency=medium
+
+  [ Triang3l ]
+  *  Register the Xenia emulator as a generator (#171)
+
+  [ Tobski ]
+  * Added SPV_KHR_fragment_shading_rate (#172)
+  * Add SPV_EXT_shader_image_int64 (#170)
+
+  [ John Kessenich ]
+  * Bump revision to 4, for SPIR-V 1.5.
+
+  [ XAMPPRocky ]
+  * Add EmbarkStudios/rust-gpu to vendor list. (#174)
+
+  [ Mike Kinsner ]
+  * Reserve additional loop control bit for Intel extension (NoFusionINTEL) (#175)
+
+  [ alelenv ]
+  * Updated headers for new trace/executeCallable and acceleration structure cast.
+  * Raytracing and Rayquery updates for final
+
+  [ Daniel Koch ]
+  * de-alias/reassign OpIgnoreIntersectionKHR/OpTerminateRayKHR
+
+  [ David Neto ]
+  * MeshShadingNV enables builtins PrimitiveId, Layer, and ViewportIndex
+
+  [ Daniel Koch ]
+  * remove HitTKHR
+
+  [ John Zupin ]
+  * packaging: update copyright
+
+ -- John Zupin <john@odin>  Tue, 08 Dec 2020 10:22:35 -0700
+
 spirv-headers (1.5.3+24-1lunarg20.04-1) focal; urgency=medium
 
   [ John Kessenich ]
