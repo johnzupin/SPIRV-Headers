@@ -1,3 +1,42 @@
+spirv-headers (1.5.4+42~rc1-1lunarg18.04-1) bionic; urgency=medium
+
+  [ Ben Ashbaugh ]
+  * add function control bitfield reservation section reserve bit 16 for an upcoming Intel extension
+
+  [ Dmitry Sidorov ]
+  * Upstream SPV_INTEL_fpga_buffer_location extension
+  * Upstream SPV_INTEL_inline_assembly extension
+  * Upstream SPV_INTEL_arbitrary_precision_integers extensions
+  * Upstream SPV_INTEL_usm_storage_classes extension
+  * Upstream SPV_INTEL_variable_length_array extension
+  * Upstream SPV_INTEL_io_pipes extension
+  * Upstream SPV_INTEL_fpga_memory_accesses extension
+  * Upstream SPV_INTEL_vector_compute extension
+  * Upstream SPV_INTEL_float_controls2 extension
+  * Update SPV_INTEL_function_pointers extension
+  * Update SPV_INTEL_kernel_attributes extension
+  * Update SPV_INTEL_fpga_loop_controls extension
+  * Add SPV_INTEL_fpga_cluster_attributes and SPV_INTEL_fp_fast_math_mode
+  * Add SPV_INTEL_loop_fuse extension
+  * Add SPV_INTEL_long_constant_composite extension
+  * Update generated files
+  * Apply suggestions to Intel extensions PR
+
+  [ David Neto ]
+  * Push FPDenormMode, FPOperationMode to the end
+
+  [ Caio Marcelo de Oliveira Filho ]
+  * Add SPV_KHR_workgroup_memory_explicit_layout
+
+  [ David Neto ]
+  * Header generator: Check enumerant ordering
+
+  [ Jason Ekstrand ]
+  * Re-run buildSpvHeaders to fix indentation
+  * Add header changes for SPV_EXT_shader_atomic_float_min_max
+
+ -- John Zupin <john@odin>  Mon, 22 Feb 2021 15:15:01 -0700
+
 spirv-headers (1.5.4+10-1lunarg18.04-1) bionic; urgency=medium
 
   [ Triang3l ]
