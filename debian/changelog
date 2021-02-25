@@ -1,3 +1,9 @@
+spirv-headers (1.5.4+42~rc2-1lunarg20.04-1) focal; urgency=medium
+
+  * packaging: updated LunarG's copyrights
+
+ -- John Zupin <john@odin>  Thu, 25 Feb 2021 13:44:03 -0700
+
 spirv-headers (1.5.4+42~rc1-1lunarg20.04-1) focal; urgency=medium
 
   [ Ben Ashbaugh ]
