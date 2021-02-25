@@ -1,3 +1,9 @@
+spirv-headers (1.5.4+42~rc2-1lunarg18.04-1) bionic; urgency=medium
+
+  * packaging: updated LunarG's copyrights
+
+ -- John Zupin <john@odin>  Thu, 25 Feb 2021 13:42:42 -0700
+
 spirv-headers (1.5.4+42~rc1-1lunarg18.04-1) bionic; urgency=medium
 
   [ Ben Ashbaugh ]
