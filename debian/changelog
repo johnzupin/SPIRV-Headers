@@ -1,3 +1,36 @@
+spirv-headers (1.5.4+57~rc1-1lunarg18.04-1) bionic; urgency=medium
+
+  [ orbea ]
+  * cmake: Install cmake files to CMAKE_INSTALL_DATADIR
+
+  [ Ben Ashbaugh ]
+  * add None as a possible value for DebugInfoFlags
+  * add generated headers
+
+  [ Dzmitry Malyshau ]
+  * Add Naga as SPIR-V generation tool
+
+  [ Alan Baker ]
+  * Change operand name in OpReadClockKHR to match extension
+
+  [ David Neto ]
+  * Support SPV_KHR_linkonce_odr
+  * Support SPV_KHR_expect_assume
+
+  [ John Zupin ]
+  * packaging: updated debian/copyright file
+
+  [ baldurk ]
+  * Add NonSemantic.Vulkan.DebugInfo.100 JSON/header
+
+  [ Michael Kinsner ]
+  * Add xml section for memory operand bit allocation tracking, and reserve two bits for an upcoming Intel extension
+
+  [ Mikko Rasa ]
+  * Add generator ID for MSP shader compiler
+
+ -- John Zupin <john@odin>  Tue, 27 Apr 2021 13:23:07 -0600
+
 spirv-headers (1.5.4+42~rc2-1lunarg18.04-1) bionic; urgency=medium
 
   * packaging: updated LunarG's copyrights
