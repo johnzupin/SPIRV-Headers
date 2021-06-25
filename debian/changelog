@@ -1,3 +1,42 @@
+spirv-headers (1.5.4+81~rc1-1lunarg18.04-1) bionic; urgency=medium
+
+  [ Dmitry Sidorov ]
+  * Upstream AP Intel extensions
+
+  [ Nikita Rudenko ]
+  * Add VectorComputeINTEL as enabling capability for Private StorageClass
+
+  [ Michael Kinsner ]
+  * Reserve loop control bit for upcoming trip count (min,max,avg) control
+
+  [ Nikita Rudenko ]
+  * Fix OpTypeBufferSurfaceINTEL token description (#207)
+
+  [ Fabian Wahlster ]
+  * Add SpvGenTwo to vendor IDs
+
+  [ Alan Baker ]
+  * Fix xml entry for SpvGenTwo generator
+
+  [ Artem Gindinson ]
+  * Update arbitrary float cast interfaces
+
+  [ David Neto ]
+  * Support SPV_KHR_subgroup_uniform_control_flow
+  * Update to CMake 3.0
+  * buildHeaders: Add override decoration
+
+  [ Michael Kinsner ]
+  * Allocate additional Intel vendor extension enum blocks
+
+  [ Stuart Brady ]
+  * Add CPP_for_OpenCL to grammar
+
+  [ John Kessenich ]
+  * Fix two ordering problems.
+
+ -- John Zupin <john@odin>  Fri, 25 Jun 2021 14:01:38 -0600
+
 spirv-headers (1.5.4+57~rc1-1lunarg18.04-1) bionic; urgency=medium
 
   [ orbea ]
