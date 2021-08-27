@@ -1,3 +1,47 @@
+spirv-headers (1.5.4+130~rc1-1lunarg20.04-1) focal; urgency=medium
+
+  [ Jason Ekstrand ]
+  * Add header changes for SPV_EXT_shader_atomic_float16_add
+
+  [ David Neto ]
+  * Support SPV_KHR_integer_dot_product
+
+  [ Kevin Petit ]
+  * Add CI using Github actions and update README
+
+  [ Ben Ashbaugh ]
+  * add support for SPV_KHR_bit_instructions
+
+  [ WyvernWang ]
+  * reserve value range
+
+  [ Mariya Podchishchaeva ]
+  * Upstream SPV_INTEL_debug_module
+
+  [ Alexander Zapryagaev ]
+  * Clay is an internal framework of Tellusim Technologies Inc.
+
+  [ Kevin Petit ]
+  * Fix grammar for PackedVectorFormat
+
+  [ Mariusz Merecki ]
+  * Add missing capabilities and '"version" : "None"' to QuantizationModes and OverflowModes enumerants
+
+  [ Graeme Leese ]
+  * Correct grammar for LocalSizeHintId
+
+  [ Nikita Rudenko ]
+  * Implement SPV_INTEL_optnone extension (#230)
+  * Fix minor details in SPV_INTEL_optnone extension
+
+  [ alelenv ]
+  * Add support for SPV_NV_ray_tracing_motion_blur.
+
+  [ Marijn Suijten ]
+  * spirv.core.grammar: Remove duplicate OpArbitraryFloatPowNINTEL declaration
+
+ -- John Zupin <john@odin>  Fri, 27 Aug 2021 15:09:15 -0600
+
 spirv-headers (1.5.4+81~rc1-1lunarg20.04-1) focal; urgency=medium
 
   [ Dmitry Sidorov ]
