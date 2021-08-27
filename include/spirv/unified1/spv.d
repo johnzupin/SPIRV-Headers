@@ -654,6 +654,7 @@ enum BuiltIn : uint
     HitTNV = 5332,
     HitKindKHR = 5333,
     HitKindNV = 5333,
+    CurrentRayTimeNV = 5334,
     IncomingRayFlagsKHR = 5351,
     IncomingRayFlagsNV = 5351,
     RayGeometryIndexKHR = 5352,
@@ -725,6 +726,7 @@ enum FunctionControlShift : uint
     DontInline = 1,
     Pure = 2,
     Const = 3,
+    OptNoneINTEL = 16,
 }
 
 enum FunctionControlMask : uint
@@ -734,6 +736,7 @@ enum FunctionControlMask : uint
     DontInline = 0x00000002,
     Pure = 0x00000004,
     Const = 0x00000008,
+    OptNoneINTEL = 0x00010000,
 }
 
 enum MemorySemanticsShift : uint
@@ -996,6 +999,7 @@ enum Capability : uint
     StorageTexelBufferArrayNonUniformIndexing = 5312,
     StorageTexelBufferArrayNonUniformIndexingEXT = 5312,
     RayTracingNV = 5340,
+    RayTracingMotionBlurNV = 5341,
     VulkanMemoryModel = 5345,
     VulkanMemoryModelKHR = 5345,
     VulkanMemoryModelDeviceScope = 5346,
@@ -1048,9 +1052,17 @@ enum Capability : uint
     IOPipesINTEL = 5943,
     BlockingPipesINTEL = 5945,
     FPGARegINTEL = 5948,
+    DotProductInputAllKHR = 6016,
+    DotProductInput4x8BitKHR = 6017,
+    DotProductInput4x8BitPackedKHR = 6018,
+    DotProductKHR = 6019,
+    BitInstructions = 6025,
     AtomicFloat32AddEXT = 6033,
     AtomicFloat64AddEXT = 6034,
     LongConstantCompositeINTEL = 6089,
+    OptNoneINTEL = 6094,
+    AtomicFloat16AddEXT = 6095,
+    DebugInfoModuleINTEL = 6114,
 }
 
 enum RayFlagsShift : uint
@@ -1148,6 +1160,11 @@ enum OverflowModes : uint
     SAT = 1,
     SAT_ZERO = 2,
     SAT_SYM = 3,
+}
+
+enum PackedVectorFormat : uint
+{
+    PackedVectorFormat4x8BitKHR = 0,
 }
 
 enum Op : uint
@@ -1508,6 +1525,12 @@ enum Op : uint
     OpConvertUToAccelerationStructureKHR = 4447,
     OpIgnoreIntersectionKHR = 4448,
     OpTerminateRayKHR = 4449,
+    OpSDotKHR = 4450,
+    OpUDotKHR = 4451,
+    OpSUDotKHR = 4452,
+    OpSDotAccSatKHR = 4453,
+    OpUDotAccSatKHR = 4454,
+    OpSUDotAccSatKHR = 4455,
     OpTypeRayQueryKHR = 4472,
     OpRayQueryInitializeKHR = 4473,
     OpRayQueryTerminateKHR = 4474,
@@ -1534,6 +1557,8 @@ enum Op : uint
     OpIgnoreIntersectionNV = 5335,
     OpTerminateRayNV = 5336,
     OpTraceNV = 5337,
+    OpTraceMotionNV = 5338,
+    OpTraceRayMotionNV = 5339,
     OpTypeAccelerationStructureKHR = 5341,
     OpTypeAccelerationStructureNV = 5341,
     OpExecuteCallableNV = 5344,
