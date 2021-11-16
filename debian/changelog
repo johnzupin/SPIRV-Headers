@@ -1,3 +1,43 @@
+spirv-headers (1.5.4+133~rc1-1lunarg20.04-1) focal; urgency=medium
+
+  [ Tomasz Kłoczko ]
+  * Add spirv-headers pkgconfig file
+  * Fixed substituted string with paths and version
+  * removed excesive space in configure_file() line
+  * Rename spirv-headers.pc to SPIRV-Headers.pc
+
+  [ Greg Fischer ]
+  * Add nonsemantic.shader.debuginfo to Bazel
+
+  [ BedrockDotPng ]
+  * Update CMakeLists.txt
+
+  [ Graeme Leese ]
+  * Remove 'Kernel' capability from fast-math flags
+
+  [ egdaniel ]
+  * Register Magic Num for Skia SkSL SPIR-V Generator
+
+  [ Pankaj Mistry ]
+  * Define a new Image operand bit mask for non constant offsets
+
+  [ Andrei Malashkin ]
+  * add 1.5.5 tag
+
+  [ Ben Ashbaugh ]
+  * reserve SPIR-V enum block for Intel extensions
+
+  [ Pankaj Mistry ]
+  * Implement header definitions for SPV_NV_bindless_texture
+
+  [ Kévin Petit ]
+  * Add SpecConstantSubgroupMaxSize to the clspv reflection non-semantic instruction set
+
+  [ Dmitry Sidorov ]
+  * Rename ConstFunctionPointerINTEL to ConstantFunctionPointerINTEL
+
+ -- John Zupin <john@odin>  Tue, 16 Nov 2021 14:50:09 -0700
+
 spirv-headers (1.5.4+130~rc1-1lunarg20.04-1) focal; urgency=medium
 
   [ Jason Ekstrand ]
