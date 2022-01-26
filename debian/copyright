@@ -41,12 +41,12 @@ Files: .gitattributes
        tools/buildHeaders/CMakeLists.txt
        tools/buildHeaders/bin/makeExtinstHeaders.py
        tools/buildHeaders/bin/makeHeaders
-Copyright: 2021, LunarG Inc
+Copyright: 2022, LunarG Inc
            2014-2020, The Khronos Group Inc
 License: Apache-2.0
 
 Files: debian/*
-Copyright: 2021, LunarG Inc
+Copyright: 2022, LunarG Inc
 License: BSD-3-clause or GPL-3 or MIT
 
 Files: tools/buildHeaders/jsoncpp/*
