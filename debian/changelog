@@ -1,3 +1,31 @@
+spirv-headers (1.5.4+147~rc1-1lunarg18.04-1) bionic; urgency=medium
+
+  [ DragonJoker ]
+  * Add ShaderWriter as SPIR-V generation tool.
+
+  [ Juan Fumero ]
+  * Register TornadoVM SPIRV Beehive Tookit Generator
+
+  [ Butygin ]
+  * Atomic float add should not imply Shader
+
+  [ Kevin Petit ]
+  * Change contact for Arm
+
+  [ Dmitry Bushev ]
+  * Add MediaBlockIOINTEL decoration declaration (#255)
+
+  [ John Kessenich ]
+  * Update headers with SPIR-V version 1.6, revision 1.
+
+  [ Michael Kinsner ]
+  * Allocate additional loop control bit for upcoming Intel extension
+
+  [ John Zupin ]
+  * packaging: update copyright
+
+ -- John Zupin <john@odin>  Thu, 03 Feb 2022 13:53:52 -0700
+
 spirv-headers (1.5.4+133~rc1-1lunarg18.04-1) bionic; urgency=medium
 
   [ Tomasz Kłoczko ]
