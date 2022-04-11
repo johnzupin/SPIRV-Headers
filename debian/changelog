@@ -1,3 +1,32 @@
+spirv-headers (1.5.4+162~rc1-1lunarg18.04-1) bionic; urgency=medium
+
+  [ Prokop Randáček ]
+  * Include bool type for C
+
+  [ Prokop Randacek ]
+  * regenerate the headers
+
+  [ Mikko Rasa ]
+  * Reserve enum range for MSP extensions
+
+  [ Graeme Leese ]
+  * Add EXT tag to capability to DemoteToHelperInvocationEXT
+
+  [ Prokop Randacek ]
+  * regenerate headers
+
+  [ Dmitry Bushev ]
+  * Implement SPV_INTEL_memory_access_aliasing extension (#265)
+
+  [ Ben Ashbaugh ]
+  * update SPIR-V headers for SPV_INTEL_split_barrier
+
+  [ Nikita Kornev ]
+  * Implement SPV_KHR_uniform_group_instructions extension
+  * Remove extensions tag from instructions
+
+ -- john <john@odin>  Mon, 11 Apr 2022 11:12:44 -0600
+
 spirv-headers (1.5.4+147~rc1-1lunarg18.04-1) bionic; urgency=medium
 
   [ DragonJoker ]
