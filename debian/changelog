@@ -1,3 +1,27 @@
+spirv-headers (1.5.4+176~rc1-1lunarg20.04-1) focal; urgency=medium
+
+  [ Kevin Petit ]
+  * Add a SourceLanguage for SYCL
+
+  [ DmitryBushev ]
+  * Add NamedBarrierCountINTEL execution mode
+  * Removed extension section
+
+  [ Andrea Pappacoda ]
+  * build: use ARCH_INDEPENDENT if possible
+
+  [ Rayan Hatout ]
+  * Register magic number for SPIRVSmith
+
+  [ Kevin Petit ]
+  * Add SPV_KHR_subgroup_rotate
+  * do not enable the instruction with the extension
+
+  [ Eric Werness ]
+  * Add SPV_KHR_ray_cull_mask
+
+ -- john <john@odin>  Wed, 25 May 2022 14:43:04 -0600
+
 spirv-headers (1.5.4+162~rc1-1lunarg20.04-1) focal; urgency=medium
 
   [ Prokop Randáček ]
