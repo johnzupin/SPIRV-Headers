@@ -1,3 +1,10 @@
+spirv-headers (1.5.4+178~rc1-1lunarg18.04-1) bionic; urgency=medium
+
+  [ Robert Campbell ]
+  * Implemented Beef language header generation
+
+ -- john <john@odin>  Thu, 09 Jun 2022 08:59:20 -0600
+
 spirv-headers (1.5.4+176~rc1-1lunarg18.04-1) bionic; urgency=medium
 
   [ Kevin Petit ]
