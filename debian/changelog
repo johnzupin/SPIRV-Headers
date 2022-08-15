@@ -1,3 +1,11 @@
+spirv-headers (1.5.4+181~rc1-1lunarg20.04-1) focal; urgency=medium
+
+  [ Arkadiusz Sarwa ]
+  * Add SPV_AMD_shader_early_and_late_fragment_tests
+  * Add SPV_AMD_shader_early_and_late_fragment_tests
+
+ -- john <john@odin>  Mon, 15 Aug 2022 13:13:57 -0600
+
 spirv-headers (1.5.4+178~rc1-1lunarg20.04-1) focal; urgency=medium
 
   [ Robert Campbell ]
