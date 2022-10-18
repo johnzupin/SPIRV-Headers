@@ -1,3 +1,34 @@
+spirv-headers (1.6.1+1.3.231.0~rc1-1lunarg22.04-1) jammy; urgency=medium
+
+  [ John Kessenich ]
+  * Update spirv.bf, which was missing the latest changes.
+
+  [ Kévin Petit ]
+  * Update clspv reflection non-semantic instruction set (#284)
+
+  [ Jeremy Hayes ]
+  * Remove custom target if skipping install
+
+  [ Pankaj Mistry ]
+  * Implement headers definitions for SPV_EXT_mesh_shader.
+
+  [ Kevin Petit ]
+  * Add definitions for SPV_ARM_core_builtins
+
+  [ Eric Werness ]
+  * VK_EXT_opacity_micromap
+
+  [ Hugo Devillers ]
+  * registered ID for Shady
+
+  [ Kévin Petit ]
+  * Add support for texel buffers to clspv non-semantic instruction set
+
+  [ Daniel Koch ]
+  * Fix extension for RayTracingOpacityMicromapEXT
+
+ -- john <john@odin>  Tue, 18 Oct 2022 10:10:45 -0600
+
 spirv-headers (1.5.4+181~rc1-1lunarg20.04-1) focal; urgency=medium
 
   [ Arkadiusz Sarwa ]
