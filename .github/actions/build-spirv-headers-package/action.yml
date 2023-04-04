@@ -1,0 +1,17 @@
+name: 'Build SPIRV-Headers Package for Ubuntu Focal'
+description: 'Build the SPIRV-Headers Package'
+inputs:
+  repo:
+    description: 'What repo to clone the SPIRV-Headers package'
+    required: true
+    default: 'main'
+  ref:
+    description: 'What ref to build the SPIRV-HEaders package'
+    required: true
+    default: 'main'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.repo }}
+    - ${{ inputs.ref }}
