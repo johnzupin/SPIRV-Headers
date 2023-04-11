@@ -1,0 +1,53 @@
+name: 'Build SPIRV-Headers Ubuntu package'
+description: 'Build the SPIRV-Headers repository for Ubuntu'
+inputs:
+  spirv_headers_repo:
+    required: false
+    type: string
+    default: 'johnzupin/SPIRV-Headers'
+    description: "Define the repository where SPIRV-Headers resides"
+  spirv_headers_ref:
+    required: false
+    type: string
+    default: 'ubuntu/focal'
+    description: "Define the reference where SPIRV-Headers resides"
+runs:
+  using: "composite"
+  steps:
+    - run: env
+      shell: bash
+    - run: |
+        apt-get update && \
+        DEBIAN_FRONTEND=noninteractive TZ=Etc/UTC apt-get install -y \
+        git-buildpackage cmake debhelper git
+      shell: bash
+    - name: "Set Repo and Ref with no inputs specified"
+      if: ${{ inputs.spirv_headers == '' }}
+      run: |
+        echo "Inputs not specified - Running as a push event"
+        echo "SPIRV_REPO=$GITHUB_REPOSITORY" >> "$GITHUB_ENV"
+        echo "SPIRV_REF=$GITHUB_REF_NAME" >> "$GITHUB_ENV"
+      shell: bash
+    - name: "Set Repo and Ref with inputs specified"
+      if: ${{ inputs.spirv_headers != '' }}
+      run: |
+        echo "Input has been specified - Running a reusable or dispatch call"
+        echo "Using specified repo/ref from input: REPO=${{ inputs.spirv_headers_repo }} REF=${{inputs.spirv_headers_ref}}"
+        echo "SPIRV_REPO=${{ inputs.spirv_headers_repo }}" >> "$GITHUB_ENV"
+        echo "SPIRV_REF=${{ inputs.spirv_headers_ref }}" >> "$GITHUB_ENV"
+      shell: bash
+    - uses: actions/checkout@v3
+      with:
+        repository: "${{ env.SPIRV_REPO }}"
+        ref: "${{ env.SPIRV_REF }}"
+        path: "${{ github.workspace }}/SPIRV-Headers"
+    - run: env
+      shell: bash
+    - run: gbp buildpackage --git-verbose --git-force-create --git-upstream-tree="branch" --git-ignore-branch --git-upstream-branch="${{ env.SPIRV_REF }}" --no-sign
+      shell: bash
+      working-directory: ${{ github.workspace }}/SPIRV-Headers
+    - uses: actions/upload-artifact@v3
+      with:
+        name: "spirv-headers-package-${{inputs.spirv_headers_ref}}"
+        path: "${{ github.workspace }}/spirv-headers*_all.deb"
+        if-no-files-found: error

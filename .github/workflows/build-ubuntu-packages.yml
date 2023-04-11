@@ -1,0 +1,45 @@
+run-name: Build Debian style packages for Ubuntu distros
+on:
+  push:
+  # workflow_call:
+  #   inputs:
+  #     spirv_headers:
+  #       required: true
+  #       type: string
+  #       default: '{"repo":"johnzupin/SPIRV-Headers","ref":"ubuntu/focal"}'
+  #       description: "A json string that defines repo and ref. Ex) {repo:johnzupin/SPIRV-Headers, ref:ubuntu/focal}"
+  # workflow_dispatch:
+  #   inputs:
+  #     spirv_headers:
+  #       required: true
+  #       type: string
+  #       default: '{"repo":"johnzupin/SPIRV-Headers","ref":"ubuntu/focal"}'
+  #       description: "A json string that defines repo and ref. Ex) {repo:johnzupin/SPIRV-Headers, ref:ubuntu/focal}"
+
+jobs:
+  build-spirv-headers-focal-package:
+    runs-on: ubuntu-latest
+    container:
+      image: ubuntu-20.04
+    steps:
+      - run: ls /usr/bin
+      - run: node --version
+      - uses: actions/checkout@v3
+      - uses: ./.github/actions/build-ubuntu-package/
+        with:
+          spirv_headers_repo: 'johnzupin/SPIRV-Headers'
+          spirv_headers_ref: 'ubuntu/focal'
+      - run: ls -l $GITHUB_WORKSPACE
+  build-spirv-headers-jammy-package:
+    runs-on: ubuntu-latest
+    container:
+      image: ubuntu-22.04
+    steps:
+      - run: ls /usr/bin
+      - run: node --version
+      - uses: actions/checkout@v3
+      - uses: ./.github/actions/build-ubuntu-package/
+        with:
+          spirv_headers_repo: 'johnzupin/SPIRV-Headers'
+          spirv_headers_ref: 'ubuntu/jammy'
+      - run: ls -l $GITHUB_WORKSPACE
