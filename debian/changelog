@@ -1,3 +1,42 @@
+spirv-headers (1.6.1+1.3.250.0~rc1-1lunarg22.04-1) jammy; urgency=medium
+
+  [ Juan Ramos ]
+  * cmake: Overally cleanup/testing update
+
+  [ Graeme Leese ]
+  * Simplify enabling capabilities for image Dim
+
+  [ David Neto ]
+  * Revert "Merge pull request #326 from juan-lunarg/juaramos/cmake"
+
+  [ Juan Ramos ]
+  * cmake: Overally cleanup/testing update
+
+  [ Duncan Brawley ]
+  * Reserve SPIR-V blocks for Codeplay
+
+  [ Jan-Harald Fredriksen ]
+  * Add SPV_EXT_shader_tile_image.
+  * Address feedback on incorrect use of version and extension fields.
+  * Add back version field for new enumerants and operands, but set to None.
+
+  [ Duncan Brawley ]
+  * Shift Codeplay opcode range to preserve alignment of opcodes and non-opcodes
+
+  [ Sidorov, Dmitry ]
+  * Fix TileImage capabilities order
+
+  [ Joyce ]
+  * chore: Set minimal permissions to presubmit
+
+  [ Eric Werness ]
+  * SPV_KHR_ray_tracing_position_fetch
+
+  [ Hugo Devillers ]
+  * Reserve a single block of opcodes and enumerants for Saarland University (#343)
+
+ -- john <john@odin>  Tue, 23 May 2023 11:14:28 -0600
+
 spirv-headers (1.6.1+1.3.243.0~rc1-1lunarg22.04-1) jammy; urgency=medium
 
   [ Qingyuan Zheng ]
