@@ -1,3 +1,71 @@
+spirv-headers (1.6.1+1.3.261.0~rc1-1lunarg22.04-1) jammy; urgency=medium
+
+  [ Arvind Sudarsanam ]
+  * Header files changes to support SPV_INTEL_fp_max_error spec extension
+  * Add parameters
+
+  [ Henry Rose ]
+  * Add Hero C Compiler to the vendor list & add C source language to the Source Language enum
+
+  [ Kevin Petit ]
+  * Make the generated operators for masks constexpr
+
+  [ Juan Fumero ]
+  * Name and url for the TornadoVM SPIR-V Library Tool updated
+
+  [ Henry Rose ]
+  * add HERO_C to the source language enumeration
+  * regenerate headers & correct order of TileImage*ReadAccessEXT Capability enum
+
+  [ Arvind Sudarsanam ]
+  * Interchange capability and decoration
+
+  [ Dunfan Lu ]
+  * Reserve SPIR-V enums for Meta
+
+  [ Joyce ]
+  * Create SECURITY.md
+
+  [ Kevin Petit ]
+  * Add definitions for SVP_EXT_image_raw10_raw12
+  * Add definitions for SPV_KHR_cooperative_matrix
+
+  [ Arvind Sudarsanam ]
+  * Change kind of FPMaxErrorDecorationINTEL to LiteralFloat
+
+  [ Kevin Petit ]
+  * fix operand names
+
+  [ Jérôme Leclercq ]
+  * Add NZSLc as a generator
+  * Add NZSL as a source language
+
+  [ SirLynix ]
+  * Regenerate headers
+
+  [ Alan Baker ]
+  * Add WGSL source language
+
+  [ Kevin Petit ]
+  * Remove capabilities on cooperative matrix enums to align with specification
+
+  [ alan-baker ]
+  * Revert "Add support for fp_max_error extension"
+
+  [ Kevin Petit ]
+  * Report failures in makeHeaders
+
+  [ asudarsa ]
+  * Recommit PR #348 - Add fp-max-error support (#363)
+
+  [ Kevin Petit ]
+  * Add KHR suffix to Cooperative Matrix Operands
+
+  [ David Neto ]
+  * Cooperative matrix enums depend on the extension
+
+ -- john <john@odin>  Tue, 15 Aug 2023 14:19:37 -0600
+
 spirv-headers (1.6.1+1.3.250.0~rc1-1lunarg22.04-1) jammy; urgency=medium
 
   [ Juan Ramos ]
