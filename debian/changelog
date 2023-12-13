@@ -1,3 +1,65 @@
+spirv-headers (1.6.1+1.3.273.0~rc1-1lunarg22.04-1) jammy; urgency=medium
+
+  [ Konstantin Seurer ]
+  * Add SPV_AMDX_shader_enqueue
+
+  [ David Neto ]
+  * Revert "Merge pull request #367 from dneto0/coop-matrix-enums-deps"
+
+  [ Viktoria Maximova ]
+  * Headers support for two Intel extensions (#356)
+
+  [ David Neto ]
+  * Validate enums have sensible versions and are visible (#369)
+
+  [ Andrzej Ratajewski ]
+  * Add SPV_INTEL_cache_controls extension support (#376)
+
+  [ gnl21 ]
+  * Remove Kernel from ConstantSampler enum values (#378)
+
+  [ Fabian Wahlster ]
+  * remove additional version "1.0" from SecondaryViewportRelativeNV (#379)
+
+  [ alelenv ]
+  * Add headers for SPV_NV_displacement_micromap. (#374)
+
+  [ Fabian Wahlster ]
+  * Add LiteralFloat to operand_kinds (#380)
+
+  [ pradyumans ]
+  * Register Slang Compiler for SPIR-V (#382)
+  * Add a Source Language for Slang (#383)
+
+  [ Romaric Jodin ]
+  * ClspvReflection non-sematic: add NormalizedSamplerMaskPushConstant (#377)
+
+  [ bwlodarcz ]
+  * Headers support for new FPGAMemoryAttributesINTEL (#384)
+
+  [ Spencer Fricke ]
+  * Fix SPV_KHR_workgroup_memory_explicit_layout implicit declare (#388)
+
+  [ John Kessenich ]
+  * It seems d790ced752b5bfc06b6988baadef6eb2d16bdf96 add tabs. (#390)
+
+  [ Viktoria Maximova ]
+  * Change token IDs for global_variable_fpga_decorations and global_variable_host_access (#389)
+
+  [ Dmitry Sidorov ]
+  * Update SPV_INTEL_long_composites tokens (#375)
+
+  [ Spencer Fricke ]
+  * Add Type-Declaration for extended types (#392)
+
+  [ bwlodarcz ]
+  * Headers support for FPGAClusterAttributesV2INTEL (#393)
+
+  [ Kévin Petit ]
+  * Add a few missing calls to std::exit on error (#395)
+
+ -- john <john@odin>  Wed, 13 Dec 2023 11:44:11 -0700
+
 spirv-headers (1.6.1+1.3.261.0~rc1-1lunarg22.04-1) jammy; urgency=medium
 
   [ Arvind Sudarsanam ]
