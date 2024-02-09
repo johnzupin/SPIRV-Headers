@@ -1,0 +1,23 @@
+name: 'install-spirv-headers'
+description: 'This action installs SPIRV-Headers'
+inputs:
+  repo:
+    description: 'The repository to clone SPIRV-Headers from'
+    required: false
+    default: 'KhronosGroup'
+  ref:
+    description: 'The git reference to build from'
+    required: false
+    default: 'main'
+runs:
+  using: "composite"
+  steps:
+    - name: "Checkout SPIRV-Headers"
+    - uses: actions/checkout@v4
+      with:
+        repository: "${{ inputs.repo }}"
+        ref: "${{ inputs.ref }}"
+    - name: "Build and Install SPIRV-Headers"
+      run: |
+        cmake -S . -B . -DCMAKE_BUILD_TYPE="Release"
+        cmake --install
