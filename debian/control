@@ -1,0 +1,16 @@
+Source: spirv-headers
+Section: graphics
+Priority: optional
+Maintainer: John Zupin <johnz@lunarg.com>
+Build-Depends: debhelper (>= 10),
+ cmake
+Standards-Version: 4.1.2
+Homepage: https://github.com/KhronosGroup/SPIRV-Headers
+Vcs-Git: https://github.com/KhronosGroup/SPIRV-Headers
+Vcs-Browser: https://github.com/KhronosGroup/SPIRV-Headers
+
+Package: spirv-headers
+Architecture: all
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: This package contains machine-readable files
+ for the SPIR-V Registry
