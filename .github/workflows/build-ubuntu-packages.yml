@@ -1,0 +1,108 @@
+name: build-ubuntu-packages
+run-name: Build Debian style packages for Ubuntu distros
+on:
+  push:
+  workflow_call:
+    inputs:
+      spirv_headers:
+        required: true
+        type: string
+        default: '{"repo":"johnzupin/SPIRV-Headers","ref":"ubuntu/focal"}'
+        description: "A json string that defines repo and ref. Ex) {repo:johnzupin/SPIRV-Headers, ref:ubuntu/focal}"
+  workflow_dispatch:
+    inputs:
+      spirv_headers:
+        required: true
+        type: string
+        default: '{"repo":"johnzupin/SPIRV-Headers","ref":"ubuntu/focal"}'
+        description: "A json string that defines repo and ref. Ex) {repo:johnzupin/SPIRV-Headers, ref:ubuntu/focal}"
+
+jobs:
+  build-spirv-headers-focal-package:
+    runs-on: ubuntu-20.04
+    steps:
+      - run: env
+      - name: "Install an updated CMake with KitWare's APT repository"
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y wget gpg
+          wget -O - https://apt.kitware.com/keys/kitware-archive-latest.asc \
+            | gpg --dearmor - | sudo tee /usr/share/keyrings/kitware-archive-keyring.gpg >/dev/null
+          echo 'deb [signed-by=/usr/share/keyrings/kitware-archive-keyring.gpg] https://apt.kitware.com/ubuntu/ focal main' \
+            | sudo tee /etc/apt/sources.list.d/kitware.list
+      - name: "Install updates and packages needed for packaging"
+        run: |
+          sudo apt-get update
+          sudo DEBIAN_FRONTEND=noninteractive TZ=Etc/UTC apt-get install -y \
+            git-buildpackage debhelper git cmake
+      - name: "Set Repo and Ref with no inputs specified"
+        if: ${{ inputs.spirv_headers == '' }}
+        run: |
+          echo "Inputs not specified - Running as a push event"
+          # echo "SPIRV_REPO=$GITHUB_REPOSITORY" >> "$GITHUB_ENV"
+          # echo "SPIRV_REF=$GITHUB_REF_NAME" >> "$GITHUB_ENV"
+          echo "SPIRV_REPO=johnzupin/SPIRV-Headers" >> "$GITHUB_ENV"
+          echo "SPIRV_REF=ubuntu/focal" >> "$GITHUB_ENV"
+      - name: "Set Repo and Ref with inputs specified"
+        if: ${{ inputs.spirv_headers != '' }}
+        run: |
+          echo "Input has been specified - Running a reusable or dispatch call"
+          echo "Using specified repo/ref from input: ${{ inputs.spirv_repo }}"
+          echo "SPIRV_REPO=${{ fromJSON(inputs.spirv_headers).repo }}" >> "$GITHUB_ENV"
+          echo "SPIRV_REF=${{ fromJSON(inputs.spirv_headers).ref }}" >> "$GITHUB_ENV"
+      - uses: actions/checkout@v4
+        with:
+          repository: "${{ env.SPIRV_REPO }}"
+          ref: "${{ env.SPIRV_REF }}"
+      - name: "Build the package"
+        run: |
+          gbp buildpackage --git-verbose --git-force-create --git-upstream-tree="branch" --git-ignore-branch --git-upstream-branch="${{ env.SPIRV_REF }}" --no-sign --no-check-builddeps
+      - uses: actions/upload-artifact@v4
+        with:
+          name: "spirv-headers-focal-package"
+          path: "${{runner.workspace}}/spirv-headers*20.04*_all.deb"
+          if-no-files-found: error
+  build-spirv-headers-jammy-package:
+    runs-on: ubuntu-22.04
+    steps:
+      - run: env
+      - name: "Install an updated CMake with KitWare's APT repository"
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y wget gpg
+          wget -O - https://apt.kitware.com/keys/kitware-archive-latest.asc \
+            | gpg --dearmor - | sudo tee /usr/share/keyrings/kitware-archive-keyring.gpg >/dev/null
+          echo 'deb [signed-by=/usr/share/keyrings/kitware-archive-keyring.gpg] https://apt.kitware.com/ubuntu/ jammy main' \
+            | sudo tee /etc/apt/sources.list.d/kitware.list
+      - name: "Install updates and packages needed for packaging"
+        run: |
+          sudo apt-get update
+          sudo DEBIAN_FRONTEND=noninteractive TZ=Etc/UTC apt-get install -y \
+            git-buildpackage debhelper git cmake
+      - name: "Set Repo and Ref with no inputs specified"
+        if: ${{ inputs.spirv_headers == '' }}
+        run: |
+          echo "Inputs not specified - Running as a push event"
+          # echo "SPIRV_REPO=$GITHUB_REPOSITORY" >> "$GITHUB_ENV"
+          # echo "SPIRV_REF=$GITHUB_REF_NAME" >> "$GITHUB_ENV"
+          echo "SPIRV_REPO=johnzupin/SPIRV-Headers" >> "$GITHUB_ENV"
+          echo "SPIRV_REF=ubuntu/jammy" >> "$GITHUB_ENV"
+      - name: "Set Repo and Ref with inputs specified"
+        if: ${{ inputs.spirv_headers != '' }}
+        run: |
+          echo "Input has been specified - Running a reusable or dispatch call"
+          echo "Using specified repo/ref from input: ${{ inputs.spirv_repo }}"
+          echo "SPIRV_REPO=${{ fromJSON(inputs.spirv_headers).repo }}" >> "$GITHUB_ENV"
+          echo "SPIRV_REF=${{ fromJSON(inputs.spirv_headers).ref }}" >> "$GITHUB_ENV"
+      - uses: actions/checkout@v4
+        with:
+          repository: "${{ env.SPIRV_REPO }}"
+          ref: "${{ env.SPIRV_REF }}"
+      - name: "Build the package"
+        run: |
+          gbp buildpackage --git-verbose --git-force-create --git-upstream-tree="branch" --git-ignore-branch --git-upstream-branch="${{ env.SPIRV_REF }}" --no-sign --no-check-builddeps
+      - uses: actions/upload-artifact@v4
+        with:
+          name: "spirv-headers-jammy-package"
+          path: "${{runner.workspace}}/spirv-headers*22.04*_all.deb"
+          if-no-files-found: error
