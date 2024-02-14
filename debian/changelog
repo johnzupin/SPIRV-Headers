@@ -1,0 +1,710 @@
+spirv-headers (1.6.1+1.3.275.0~rc1-1lunarg20.04-1) focal; urgency=medium
+
+  * UNRELEASED
+
+ -- john <john@odin>  Tue, 09 Jan 2024 11:01:15 -0700
+
+spirv-headers (1.6.1+1.3.273.0~rc1-1lunarg20.04-1) focal; urgency=medium
+
+  [ Konstantin Seurer ]
+  * Add SPV_AMDX_shader_enqueue
+
+  [ David Neto ]
+  * Revert "Merge pull request #367 from dneto0/coop-matrix-enums-deps"
+
+  [ Viktoria Maximova ]
+  * Headers support for two Intel extensions (#356)
+
+  [ David Neto ]
+  * Validate enums have sensible versions and are visible (#369)
+
+  [ Andrzej Ratajewski ]
+  * Add SPV_INTEL_cache_controls extension support (#376)
+
+  [ gnl21 ]
+  * Remove Kernel from ConstantSampler enum values (#378)
+
+  [ Fabian Wahlster ]
+  * remove additional version "1.0" from SecondaryViewportRelativeNV (#379)
+
+  [ alelenv ]
+  * Add headers for SPV_NV_displacement_micromap. (#374)
+
+  [ Fabian Wahlster ]
+  * Add LiteralFloat to operand_kinds (#380)
+
+  [ pradyumans ]
+  * Register Slang Compiler for SPIR-V (#382)
+  * Add a Source Language for Slang (#383)
+
+  [ Romaric Jodin ]
+  * ClspvReflection non-sematic: add NormalizedSamplerMaskPushConstant (#377)
+
+  [ bwlodarcz ]
+  * Headers support for new FPGAMemoryAttributesINTEL (#384)
+
+  [ Spencer Fricke ]
+  * Fix SPV_KHR_workgroup_memory_explicit_layout implicit declare (#388)
+
+  [ John Kessenich ]
+  * It seems d790ced752b5bfc06b6988baadef6eb2d16bdf96 add tabs. (#390)
+
+  [ Viktoria Maximova ]
+  * Change token IDs for global_variable_fpga_decorations and global_variable_host_access (#389)
+
+  [ Dmitry Sidorov ]
+  * Update SPV_INTEL_long_composites tokens (#375)
+
+  [ Spencer Fricke ]
+  * Add Type-Declaration for extended types (#392)
+
+  [ bwlodarcz ]
+  * Headers support for FPGAClusterAttributesV2INTEL (#393)
+
+  [ Kévin Petit ]
+  * Add a few missing calls to std::exit on error (#395)
+
+ -- john <john@odin>  Wed, 13 Dec 2023 11:43:01 -0700
+
+spirv-headers (1.6.1+1.3.261.0~rc1-1lunarg20.04-1) focal; urgency=medium
+
+  [ Arvind Sudarsanam ]
+  * Header files changes to support SPV_INTEL_fp_max_error spec extension
+  * Add parameters
+
+  [ Henry Rose ]
+  * Add Hero C Compiler to the vendor list & add C source language to the Source Language enum
+
+  [ Kevin Petit ]
+  * Make the generated operators for masks constexpr
+
+  [ Juan Fumero ]
+  * Name and url for the TornadoVM SPIR-V Library Tool updated
+
+  [ Henry Rose ]
+  * add HERO_C to the source language enumeration
+  * regenerate headers & correct order of TileImage*ReadAccessEXT Capability enum
+
+  [ Arvind Sudarsanam ]
+  * Interchange capability and decoration
+
+  [ Dunfan Lu ]
+  * Reserve SPIR-V enums for Meta
+
+  [ Joyce ]
+  * Create SECURITY.md
+
+  [ Kevin Petit ]
+  * Add definitions for SVP_EXT_image_raw10_raw12
+  * Add definitions for SPV_KHR_cooperative_matrix
+
+  [ Arvind Sudarsanam ]
+  * Change kind of FPMaxErrorDecorationINTEL to LiteralFloat
+
+  [ Kevin Petit ]
+  * fix operand names
+
+  [ Jérôme Leclercq ]
+  * Add NZSLc as a generator
+  * Add NZSL as a source language
+
+  [ SirLynix ]
+  * Regenerate headers
+
+  [ Alan Baker ]
+  * Add WGSL source language
+
+  [ Kevin Petit ]
+  * Remove capabilities on cooperative matrix enums to align with specification
+
+  [ alan-baker ]
+  * Revert "Add support for fp_max_error extension"
+
+  [ Kevin Petit ]
+  * Report failures in makeHeaders
+
+  [ asudarsa ]
+  * Recommit PR #348 - Add fp-max-error support (#363)
+
+  [ Kevin Petit ]
+  * Add KHR suffix to Cooperative Matrix Operands
+
+  [ David Neto ]
+  * Cooperative matrix enums depend on the extension
+
+ -- john <john@odin>  Tue, 15 Aug 2023 14:18:08 -0600
+
+spirv-headers (1.6.1+1.3.250.0~rc1-1lunarg20.04-1) focal; urgency=medium
+
+  [ Juan Ramos ]
+  * cmake: Overally cleanup/testing update
+
+  [ Graeme Leese ]
+  * Simplify enabling capabilities for image Dim
+
+  [ David Neto ]
+  * Revert "Merge pull request #326 from juan-lunarg/juaramos/cmake"
+
+  [ Juan Ramos ]
+  * cmake: Overally cleanup/testing update
+
+  [ Duncan Brawley ]
+  * Reserve SPIR-V blocks for Codeplay
+
+  [ Jan-Harald Fredriksen ]
+  * Add SPV_EXT_shader_tile_image.
+  * Address feedback on incorrect use of version and extension fields.
+  * Add back version field for new enumerants and operands, but set to None.
+
+  [ Duncan Brawley ]
+  * Shift Codeplay opcode range to preserve alignment of opcodes and non-opcodes
+
+  [ Sidorov, Dmitry ]
+  * Fix TileImage capabilities order
+
+  [ Joyce ]
+  * chore: Set minimal permissions to presubmit
+
+  [ Eric Werness ]
+  * SPV_KHR_ray_tracing_position_fetch
+
+  [ Hugo Devillers ]
+  * Reserve a single block of opcodes and enumerants for Saarland University (#343)
+
+ -- john <john@odin>  Tue, 23 May 2023 11:12:53 -0600
+
+spirv-headers (1.6.1+1.3.243.0~rc1-1lunarg20.04-1) focal; urgency=medium
+
+  [ Qingyuan Zheng ]
+  * NonSemantic.DebugBreak
+
+  [ Chen, Brox ]
+  * added SPRIV_INTEL_argument_interfaces
+  * added extension name
+  * remove MMHostInterfaceAlignment and added parameters
+
+  [ Ben Ashbaugh ]
+  * decouple SPV_KHR_shader_clock from the Shader capability
+
+  [ Abhishek Tiwari ]
+  * add RegisterMapInterfaceINTEL
+  * address review comment
+  * add FPGAKernelAttributesv2INTEL to all files
+  * correct file entry position for FPGAKernelAttributesv2INTEL
+
+  [ Wooyoung Kim ]
+  * SPV_QCOM_image_processing
+  * SPV_QCOM_image_processing
+
+  [ Abhishek Tiwari ]
+  * move FPGAKernelAttributesv2INTEL to capability section in all files
+  * update parameter name to match spec in grammar file
+
+  [ Wooyoung Kim ]
+  * SPV_QCOM_image_processing
+  * SPV_QCOM_image_processing
+
+  [ Arvind Sudarsanam ]
+  * Add support for SPV_INTEL_fpga_latency_control extension
+  * Remove redundant extensions entry
+  * Add parameters
+
+  [ Ben Ashbaugh ]
+  * headers support for SPV_INTEL_bfloat16_conversion
+
+  [ Arvind Sudarsanam ]
+  * Fix error in merge conflict resolution
+
+ -- john <john@odin>  Wed, 22 Mar 2023 09:30:24 -0600
+
+spirv-headers (1.6.1+1.3.239.0~rc1-1lunarg20.04-1) focal; urgency=medium
+
+  [ Mark Mendell ]
+  * Add support for StreamingInterfaceINTEL in headers (#305)
+
+  [ David Neto ]
+  * C++ headers: Define & and ~ bitwise operators for mask enums
+  * Add operator^
+
+  [ Callum Fare ]
+  * Update ClspvReflection non-semantic instruction set (#308)
+
+  [ Alan Baker ]
+  * Make operands to Kernel added in v5 optional
+
+  [ John Zupin ]
+  * packaging: debian: update copyright
+
+ -- john <john@odin>  Mon, 23 Jan 2023 11:25:50 -0700
+
+spirv-headers (1.6.1+1.3.236.0~rc1-1lunarg20.04-1) focal; urgency=medium
+
+  [ Sidorov, Dmitry ]
+  * Update SPV_INTEL_fpga_loop_controls to rev I
+  * Add SPV_INTEL_fpga_invocation_pipelining_attributes
+  * Add SPV_INTEL_fpga_dsp_control
+  * Add SPV_INTEL_runtime_aligned
+
+  [ alelenv ]
+  * Add headers for SPV_NV_shader_invocation_reorder.
+
+  [ Alan Baker ]
+  * Add spirv.hpp11 to BUILD.gn
+
+  [ David Neto ]
+  * Revert "Merge pull request #301 from alan-baker/hpp1" (#302)
+
+  [ alelenv ]
+  * Review feedback 1.
+  * Fix typo.
+  * Remove extension
+
+  [ Sidorov, Dmitry ]
+  * Remove unnecessary extensions addition
+
+  [ PENGUINLIONG ]
+  * Register Taichi as SPIR-V generator
+
+  [ Stephen Clarke ]
+  * Update spir-v.xml
+
+  [ PENGUINLIONG ]
+  * Update spir-v.xml
+  * Update spir-v.xml
+
+ -- john <john@odin>  Thu, 08 Dec 2022 10:28:10 -0700
+
+spirv-headers (1.6.1+1.3.231.0~rc1-1lunarg20.04-1) focal; urgency=medium
+
+  [ John Kessenich ]
+  * Update spirv.bf, which was missing the latest changes.
+
+  [ Kévin Petit ]
+  * Update clspv reflection non-semantic instruction set (#284)
+
+  [ Jeremy Hayes ]
+  * Remove custom target if skipping install
+
+  [ Pankaj Mistry ]
+  * Implement headers definitions for SPV_EXT_mesh_shader.
+
+  [ Kevin Petit ]
+  * Add definitions for SPV_ARM_core_builtins
+
+  [ Eric Werness ]
+  * VK_EXT_opacity_micromap
+
+  [ Hugo Devillers ]
+  * registered ID for Shady
+
+  [ Kévin Petit ]
+  * Add support for texel buffers to clspv non-semantic instruction set
+
+  [ Daniel Koch ]
+  * Fix extension for RayTracingOpacityMicromapEXT
+
+ -- john <john@odin>  Tue, 18 Oct 2022 10:09:22 -0600
+
+spirv-headers (1.5.4+181~rc1-1lunarg20.04-1) focal; urgency=medium
+
+  [ Arkadiusz Sarwa ]
+  * Add SPV_AMD_shader_early_and_late_fragment_tests
+  * Add SPV_AMD_shader_early_and_late_fragment_tests
+
+ -- john <john@odin>  Mon, 15 Aug 2022 13:13:57 -0600
+
+spirv-headers (1.5.4+178~rc1-1lunarg20.04-1) focal; urgency=medium
+
+  [ Robert Campbell ]
+  * Implemented Beef language header generation
+
+ -- john <john@odin>  Thu, 09 Jun 2022 09:00:20 -0600
+
+spirv-headers (1.5.4+176~rc1-1lunarg20.04-1) focal; urgency=medium
+
+  [ Kevin Petit ]
+  * Add a SourceLanguage for SYCL
+
+  [ DmitryBushev ]
+  * Add NamedBarrierCountINTEL execution mode
+  * Removed extension section
+
+  [ Andrea Pappacoda ]
+  * build: use ARCH_INDEPENDENT if possible
+
+  [ Rayan Hatout ]
+  * Register magic number for SPIRVSmith
+
+  [ Kevin Petit ]
+  * Add SPV_KHR_subgroup_rotate
+  * do not enable the instruction with the extension
+
+  [ Eric Werness ]
+  * Add SPV_KHR_ray_cull_mask
+
+ -- john <john@odin>  Wed, 25 May 2022 14:43:04 -0600
+
+spirv-headers (1.5.4+162~rc1-1lunarg20.04-1) focal; urgency=medium
+
+  [ Prokop Randáček ]
+  * Include bool type for C
+
+  [ Prokop Randacek ]
+  * regenerate the headers
+
+  [ Mikko Rasa ]
+  * Reserve enum range for MSP extensions
+
+  [ Graeme Leese ]
+  * Add EXT tag to capability to DemoteToHelperInvocationEXT
+
+  [ Prokop Randacek ]
+  * regenerate headers
+
+  [ Dmitry Bushev ]
+  * Implement SPV_INTEL_memory_access_aliasing extension (#265)
+
+  [ Ben Ashbaugh ]
+  * update SPIR-V headers for SPV_INTEL_split_barrier
+
+  [ Nikita Kornev ]
+  * Implement SPV_KHR_uniform_group_instructions extension
+  * Remove extensions tag from instructions
+
+ -- john <john@odin>  Mon, 11 Apr 2022 11:13:47 -0600
+
+spirv-headers (1.5.4+147~rc1-1lunarg20.04-1) focal; urgency=medium
+
+  [ DragonJoker ]
+  * Add ShaderWriter as SPIR-V generation tool.
+
+  [ Juan Fumero ]
+  * Register TornadoVM SPIRV Beehive Tookit Generator
+
+  [ Butygin ]
+  * Atomic float add should not imply Shader
+
+  [ Kevin Petit ]
+  * Change contact for Arm
+
+  [ Dmitry Bushev ]
+  * Add MediaBlockIOINTEL decoration declaration (#255)
+
+  [ John Kessenich ]
+  * Update headers with SPIR-V version 1.6, revision 1.
+
+  [ Michael Kinsner ]
+  * Allocate additional loop control bit for upcoming Intel extension
+
+  [ John Zupin ]
+  * packaging: update copyright
+
+ -- John Zupin <john@odin>  Thu, 03 Feb 2022 13:55:22 -0700
+
+spirv-headers (1.5.4+133~rc1-1lunarg20.04-1) focal; urgency=medium
+
+  [ Tomasz Kłoczko ]
+  * Add spirv-headers pkgconfig file
+  * Fixed substituted string with paths and version
+  * removed excesive space in configure_file() line
+  * Rename spirv-headers.pc to SPIRV-Headers.pc
+
+  [ Greg Fischer ]
+  * Add nonsemantic.shader.debuginfo to Bazel
+
+  [ BedrockDotPng ]
+  * Update CMakeLists.txt
+
+  [ Graeme Leese ]
+  * Remove 'Kernel' capability from fast-math flags
+
+  [ egdaniel ]
+  * Register Magic Num for Skia SkSL SPIR-V Generator
+
+  [ Pankaj Mistry ]
+  * Define a new Image operand bit mask for non constant offsets
+
+  [ Andrei Malashkin ]
+  * add 1.5.5 tag
+
+  [ Ben Ashbaugh ]
+  * reserve SPIR-V enum block for Intel extensions
+
+  [ Pankaj Mistry ]
+  * Implement header definitions for SPV_NV_bindless_texture
+
+  [ Kévin Petit ]
+  * Add SpecConstantSubgroupMaxSize to the clspv reflection non-semantic instruction set
+
+  [ Dmitry Sidorov ]
+  * Rename ConstFunctionPointerINTEL to ConstantFunctionPointerINTEL
+
+ -- John Zupin <john@odin>  Tue, 16 Nov 2021 14:50:09 -0700
+
+spirv-headers (1.5.4+130~rc1-1lunarg20.04-1) focal; urgency=medium
+
+  [ Jason Ekstrand ]
+  * Add header changes for SPV_EXT_shader_atomic_float16_add
+
+  [ David Neto ]
+  * Support SPV_KHR_integer_dot_product
+
+  [ Kevin Petit ]
+  * Add CI using Github actions and update README
+
+  [ Ben Ashbaugh ]
+  * add support for SPV_KHR_bit_instructions
+
+  [ WyvernWang ]
+  * reserve value range
+
+  [ Mariya Podchishchaeva ]
+  * Upstream SPV_INTEL_debug_module
+
+  [ Alexander Zapryagaev ]
+  * Clay is an internal framework of Tellusim Technologies Inc.
+
+  [ Kevin Petit ]
+  * Fix grammar for PackedVectorFormat
+
+  [ Mariusz Merecki ]
+  * Add missing capabilities and '"version" : "None"' to QuantizationModes and OverflowModes enumerants
+
+  [ Graeme Leese ]
+  * Correct grammar for LocalSizeHintId
+
+  [ Nikita Rudenko ]
+  * Implement SPV_INTEL_optnone extension (#230)
+  * Fix minor details in SPV_INTEL_optnone extension
+
+  [ alelenv ]
+  * Add support for SPV_NV_ray_tracing_motion_blur.
+
+  [ Marijn Suijten ]
+  * spirv.core.grammar: Remove duplicate OpArbitraryFloatPowNINTEL declaration
+
+ -- John Zupin <john@odin>  Fri, 27 Aug 2021 15:09:15 -0600
+
+spirv-headers (1.5.4+81~rc1-1lunarg20.04-1) focal; urgency=medium
+
+  [ Dmitry Sidorov ]
+  * Upstream AP Intel extensions
+
+  [ Nikita Rudenko ]
+  * Add VectorComputeINTEL as enabling capability for Private StorageClass
+
+  [ Michael Kinsner ]
+  * Reserve loop control bit for upcoming trip count (min,max,avg) control
+
+  [ Nikita Rudenko ]
+  * Fix OpTypeBufferSurfaceINTEL token description (#207)
+
+  [ Fabian Wahlster ]
+  * Add SpvGenTwo to vendor IDs
+
+  [ Alan Baker ]
+  * Fix xml entry for SpvGenTwo generator
+
+  [ Artem Gindinson ]
+  * Update arbitrary float cast interfaces
+
+  [ David Neto ]
+  * Support SPV_KHR_subgroup_uniform_control_flow
+  * Update to CMake 3.0
+  * buildHeaders: Add override decoration
+
+  [ Michael Kinsner ]
+  * Allocate additional Intel vendor extension enum blocks
+
+  [ Stuart Brady ]
+  * Add CPP_for_OpenCL to grammar
+
+  [ John Kessenich ]
+  * Fix two ordering problems.
+
+ -- John Zupin <john@odin>  Fri, 25 Jun 2021 14:03:09 -0600
+
+spirv-headers (1.5.4+57~rc1-1lunarg20.04-1) focal; urgency=medium
+
+  [ orbea ]
+  * cmake: Install cmake files to CMAKE_INSTALL_DATADIR
+
+  [ Ben Ashbaugh ]
+  * add None as a possible value for DebugInfoFlags
+  * add generated headers
+
+  [ Dzmitry Malyshau ]
+  * Add Naga as SPIR-V generation tool
+
+  [ Alan Baker ]
+  * Change operand name in OpReadClockKHR to match extension
+
+  [ David Neto ]
+  * Support SPV_KHR_linkonce_odr
+  * Support SPV_KHR_expect_assume
+
+  [ John Zupin ]
+  * packaging: updated debian/copyright file
+
+  [ baldurk ]
+  * Add NonSemantic.Vulkan.DebugInfo.100 JSON/header
+
+  [ Michael Kinsner ]
+  * Add xml section for memory operand bit allocation tracking, and reserve two bits for an upcoming Intel extension
+
+  [ Mikko Rasa ]
+  * Add generator ID for MSP shader compiler
+
+ -- John Zupin <john@odin>  Tue, 27 Apr 2021 13:23:53 -0600
+
+spirv-headers (1.5.4+42~rc2-1lunarg20.04-1) focal; urgency=medium
+
+  * packaging: updated LunarG's copyrights
+
+ -- John Zupin <john@odin>  Thu, 25 Feb 2021 13:44:03 -0700
+
+spirv-headers (1.5.4+42~rc1-1lunarg20.04-1) focal; urgency=medium
+
+  [ Ben Ashbaugh ]
+  * add function control bitfield reservation section reserve bit 16 for an upcoming Intel extension
+
+  [ Dmitry Sidorov ]
+  * Upstream SPV_INTEL_fpga_buffer_location extension
+  * Upstream SPV_INTEL_inline_assembly extension
+  * Upstream SPV_INTEL_arbitrary_precision_integers extensions
+  * Upstream SPV_INTEL_usm_storage_classes extension
+  * Upstream SPV_INTEL_variable_length_array extension
+  * Upstream SPV_INTEL_io_pipes extension
+  * Upstream SPV_INTEL_fpga_memory_accesses extension
+  * Upstream SPV_INTEL_vector_compute extension
+  * Upstream SPV_INTEL_float_controls2 extension
+  * Update SPV_INTEL_function_pointers extension
+  * Update SPV_INTEL_kernel_attributes extension
+  * Update SPV_INTEL_fpga_loop_controls extension
+  * Add SPV_INTEL_fpga_cluster_attributes and SPV_INTEL_fp_fast_math_mode
+  * Add SPV_INTEL_loop_fuse extension
+  * Add SPV_INTEL_long_constant_composite extension
+  * Update generated files
+  * Apply suggestions to Intel extensions PR
+
+  [ David Neto ]
+  * Push FPDenormMode, FPOperationMode to the end
+
+  [ Caio Marcelo de Oliveira Filho ]
+  * Add SPV_KHR_workgroup_memory_explicit_layout
+
+  [ David Neto ]
+  * Header generator: Check enumerant ordering
+
+  [ Jason Ekstrand ]
+  * Re-run buildSpvHeaders to fix indentation
+  * Add header changes for SPV_EXT_shader_atomic_float_min_max
+
+ -- John Zupin <john@odin>  Mon, 22 Feb 2021 15:15:46 -0700
+
+spirv-headers (1.5.4+10-1lunarg20.04-1) focal; urgency=medium
+
+  [ Triang3l ]
+  *  Register the Xenia emulator as a generator (#171)
+
+  [ Tobski ]
+  * Added SPV_KHR_fragment_shading_rate (#172)
+  * Add SPV_EXT_shader_image_int64 (#170)
+
+  [ John Kessenich ]
+  * Bump revision to 4, for SPIR-V 1.5.
+
+  [ XAMPPRocky ]
+  * Add EmbarkStudios/rust-gpu to vendor list. (#174)
+
+  [ Mike Kinsner ]
+  * Reserve additional loop control bit for Intel extension (NoFusionINTEL) (#175)
+
+  [ alelenv ]
+  * Updated headers for new trace/executeCallable and acceleration structure cast.
+  * Raytracing and Rayquery updates for final
+
+  [ Daniel Koch ]
+  * de-alias/reassign OpIgnoreIntersectionKHR/OpTerminateRayKHR
+
+  [ David Neto ]
+  * MeshShadingNV enables builtins PrimitiveId, Layer, and ViewportIndex
+
+  [ Daniel Koch ]
+  * remove HitTKHR
+
+  [ John Zupin ]
+  * packaging: update copyright
+
+ -- John Zupin <john@odin>  Tue, 08 Dec 2020 10:22:35 -0700
+
+spirv-headers (1.5.3+24-1lunarg20.04-1) focal; urgency=medium
+
+  [ John Kessenich ]
+  * Update the registry in spir-v.xml to modernize and split out opcodes. (#156)
+
+  [ alan-baker ]
+  * Publish the headers for the clspv embedded reflection non-semantic extended instruction set (#164)
+  * Update BUILD.bazel and BUILD.gn (#166)
+
+  [ John Zupin ]
+  * debian: remove README.Debian
+
+  [ Mariusz Merecki ]
+  * Reserve SPIR-V token range for upcoming Intel extensions. (#165)
+
+  [ John Kessenich ]
+  * Rebuild of latest headers, which slightly moves OpTerminateInvocation
+
+  [ Shahbaz Youssefi ]
+  * Register the ANGLE compiler (#168)
+
+  [ Yuwen Wu ]
+  * Register the Messiah SPIR-V CodeGen (#169)
+
+ -- John Zupin <john@odin>  Mon, 28 Sep 2020 16:45:34 -0600
+
+spirv-headers (1.5.3+18-1lunarg20.04-1) focal; urgency=medium
+
+  [ Dmitry Sidorov ]
+  * Add SPV_INTEL_function_pointers preview extension
+
+  [ Michael Kinsner ]
+  * Propose bit allocation mechanism for the FP Fast Math Mode bitfield, following from the mechanism previously added for the loop control bitfield.
+
+  [ John Kessenich ]
+  * Header build from previous grammar update.
+
+  [ Dmitry Sidorov ]
+  * Add Intel specific definitions from KhronosGroup/SPIRV-LLVM-Translator
+  * Apply suggestions
+
+  [ John Kessenich ]
+  * Rebuild headers against the previous grammar commit.
+
+  [ David Neto ]
+  * spir-v.xml: Use plain ASCII quotes in comment
+
+  [ dan sinclair ]
+  * Register the Tint compiler
+
+  [ John Zupin ]
+  * control: update arch to all
+
+  [ Vikram Kushwaha ]
+  * Add changes for SPV_EXT_shader_atomic_float
+
+  [ alan-baker ]
+  * Support SPV_KHR_terminate_invocation (#163)
+
+  [ John Zupin ]
+  * copyright: update for release
+  * copyright: updated to reflect LunarG as debian/ creators
+
+ -- John Zupin <john@odin>  Mon, 27 Jul 2020 14:15:15 -0600
+
+spirv-headers (1.5.3+2-1) bionic; urgency=medium
+
+  * Initial release
+
+ -- John Zupin <john@unknown>  Tue, 23 Jun 2020 11:08:04 -0600
