@@ -1,3 +1,16 @@
+spirv-headers (1.6.1+1.3.283.0~rc1-1lunarg22.04-1) jammy; urgency=medium
+
+  [ PENGUINLIONG ]
+  * Register spq tools for SPIR-V (#399)
+
+  [ Michal Paszkowski ]
+  * Register LLVM SPIR-V Backend as SPIR-V generator (#423)
+
+  [ Adel Ejjeh ]
+  * Update bit reservations for loop controsl and memory operands (#424)
+
+ -- john <john@odin>  Tue, 07 May 2024 08:04:56 -0600
+
 spirv-headers (1.6.1+1.3.280.0~rc1-1lunarg22.04-1) jammy; urgency=medium
 
   [ Viktoria Maximova ]
