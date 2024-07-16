@@ -1,3 +1,31 @@
+spirv-headers (1.6.1+1.3.290.0~rc1-1lunarg24.04-1) noble; urgency=medium
+
+  [ Romaric Jodin ]
+  * VkspReflection non-sematic: add dispatchId in configuration (#425)
+
+  [ Kévin Petit ]
+  * Add utility functions to strinfigy value enums (#426)
+
+  [ gnl21 ]
+  * Fix SPIR-V reserved ranges (#427)
+
+  [ Kévin Petit ]
+  * SPV_EXT_replicated_composites (#431)
+
+  [ Nathan Gauër ]
+  * Adds SPV_KHR_relaxed_extended_instruction (#434)
+
+  [ alan-baker ]
+  * Enforce grammar naming conventions for aliases (#432)
+
+  [ Nathan Gauër ]
+  * Add KHR suffix to OpExtInstWithForwardRefsKHR (#435)
+
+  [ Kévin Petit ]
+  * SPV_ARM_cooperative_matrix_layouts (#433)
+
+ -- john <john@odin>  Tue, 16 Jul 2024 10:57:54 -0600
+
 spirv-headers (1.6.1+1.3.283.0~rc1-1lunarg22.04-1) jammy; urgency=medium
 
   [ PENGUINLIONG ]
