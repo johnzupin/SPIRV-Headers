@@ -1,3 +1,37 @@
+spirv-headers (1.6.1+1.3.296.0~rc1-1lunarg22.04-1) jammy; urgency=medium
+
+  [ Victor Lomuller ]
+  * Update headers with SPIR-V version 1.6, revision 4. (#437)
+
+  [ Kévin Petit ]
+  * Reserve 4 memory operands bits for Arm (#436)
+
+  [ alan-baker ]
+  * Support for SPV_KHR_untyped_pointers (#439)
+
+  [ Romaric Jodin ]
+  * VkspReflection non-sematic: add fields to DescriptorSetBuffer (#440)
+
+  [ alan-baker ]
+  * Add missing OpUntypedPrefetchKHR (#441)
+
+  [ Robert Konrad ]
+  * Request a vendor id for Kongruent (#443)
+
+  [ Kévin Petit ]
+  * Add UnormInt2_101010EXT ImageChannelDataType (#444)
+
+  [ Jakub Kuderski ]
+  * Update spirv generator info (#445)
+
+  [ Ben Ashbaugh ]
+  * add support for SPV_INTEL_subgroup_buffer_prefetch (#442)
+
+  [ Victor Lomuller ]
+  * Add Capability and Execution mode SPV_KHR_compute_shader_derivatives (#446)
+
+ -- john <john@odin>  Tue, 01 Oct 2024 08:46:00 -0600
+
 spirv-headers (1.6.1+1.3.290.0~rc1-1lunarg22.04-1) jammy; urgency=medium
 
   [ Romaric Jodin ]
