@@ -1,3 +1,50 @@
+spirv-headers (1.6.1+1.4.312.0~rc1-1lunarg22.04-1) jammy; urgency=medium
+
+  [ Ben Ashbaugh ]
+  * updates AtomicStorageOps to depend on the AtomicStorage capability (#479)
+
+  [ ChrisGautier ]
+  * Register tool ID 47 for a new ARM SPIR-V generator. (#486)
+
+  [ Ben Ashbaugh ]
+  * remove extra arbitrary precision fixed point instructions operands (#491)
+
+  [ Romaric Jodin ]
+  * ClspvReflection non-sematic: Add WorkgroupVariableSize (#493)
+
+  [ Yong He ]
+  * Update Slang tool entry. (#496)
+
+  [ stu-s ]
+  * Add SPV_KHR_bfloat16 (#502)
+
+  [ Dmitry Sidorov ]
+  * Add headers for SPV_INTEL_tensor_float32_conversion extension (#501)
+
+  [ Victor Lomuller ]
+  * Add grammar entries for SPV_INTEL_task_sequence (#494)
+
+  [ Ben Ashbaugh ]
+  * fixes for SPV_INTEL_arbitrary_precision_floating_point (#495)
+
+  [ Daniel Koch ]
+  * Fix json capabilities for RayTracingOpacityMicromapEXT (#498)
+
+  [ Victor Lomuller ]
+  * Fix OpFPGARegINTEL grammar (#503)
+
+  [ Ben Ashbaugh ]
+  * header updates for SPV_INTEL_ternary_bitwise_function (#504)
+  * bump the required CMake version to 3.14 (#505)
+
+  [ rj123-nv ]
+  * Add DisplacementMicromapNV to the capabilities enabling OpTypeAccelerationStructureKHR (#508)
+
+  [ Kévin Petit ]
+  * Add ImageChannelDataType definitions for cl_ext_image_unsigned_10x6_12x4_14x2 (#507)
+
+ -- john <john@odin>  Tue, 15 Apr 2025 14:23:42 -0600
+
 spirv-headers (1.6.1+1.4.309.0~rc1-1lunarg22.04-1) jammy; urgency=medium
 
   [ Jakub Žádník ]
